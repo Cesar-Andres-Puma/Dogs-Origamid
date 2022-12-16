@@ -44,7 +44,7 @@ li{
     background: #fb1;
     color: #764701;
     min-width: 8rem;
-    padding: 0.4rem 1.2rem;
+    padding: 0.5rem 1.2rem;
     box-sizing: border-box;
     transition: .1s;
 :hover,
@@ -76,5 +76,16 @@ li{
     background: url(${login}) no-repeat 50%;
     background-size: cover;
   }
+}
+@media (max-width: 40rem) {
+  .container{
+    grid-template-columns: 1fr;
+    padding-left: 1rem;
+    &::before{
+      display: none;
+    }
+  }
+  
+  
 }
 `;

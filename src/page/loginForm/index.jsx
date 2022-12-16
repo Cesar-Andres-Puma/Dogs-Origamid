@@ -8,15 +8,6 @@ import { Button } from "../../components/button";
 import { userForm } from "../../hooks";
 import { UserContext } from "../../context";
 
-const teste1 =
-  "amd-keyid-578c545f796951421221a4a578acdb5f682f89c8.microsoftaik.azure.net";
-const teste2 =
-  "amd-keyid-578c545f796951421221a4a578acdb5f682f89c8.microsoftaik.azure.net";
-if (teste1 === teste2) {
-  console.log(" mae do caixeta");
-} else {
-  console.log("pai do caixeta pelado");
-}
 export const LoginForm = () => {
   const { login, error, loading } = useContext(UserContext);
   const username = userForm();
