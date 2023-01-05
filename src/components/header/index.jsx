@@ -8,8 +8,8 @@ export const Header = () => {
   const { data, UserLogout } = useContext(UserContext);
 
   return (
-    <>
-      <S.NavFlex>
+    <S.Header>
+      <S.NavFlex className="ContainerHero">
         <NavLink to="/" end>
           <img src={iconLogo} alt="" />
         </NavLink>
@@ -18,7 +18,6 @@ export const Header = () => {
             {data ? (
               <>
                 <S.LinkNav>{data.username}</S.LinkNav>
-                <button onClick={UserLogout}>Sair</button>
               </>
             ) : (
               <S.LinkNav>Login / Criar</S.LinkNav>
@@ -26,6 +25,6 @@ export const Header = () => {
           </S.Navh4>
         </NavLink>
       </S.NavFlex>
-    </>
+    </S.Header>
   );
 };

@@ -8,16 +8,20 @@ export const Global = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
 }
-body{
-    background-color:black;
-    color: white;
-    
-    }
 a{
     text-decoration: none;
 }
 li{
     list-style: none;
+}
+body{
+  color: white;
+  background-color: black;
+}
+.ContainerHero{
+  max-width: 50rem;
+    padding: 0 1rem;
+    margin: 0 auto;
 }
 .LinkPassword{
   margin: 2.5rem 0;

@@ -14,6 +14,12 @@ export const LoginForm = () => {
   const password = userForm();
   const [iconPassword, setIconPassword] = useState(false);
 
+  if (password.value === "") {
+    console.log("nao tem nada");
+  } else {
+    console.log("Tem algo");
+  }
+
   const { UserLogin } = useContext(UserContext);
   const handleSubmit = (e) => {
     e.preventDefault();

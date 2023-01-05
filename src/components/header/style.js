@@ -1,19 +1,23 @@
 import styled from "styled-components";
 import { themes } from "../../../style/themes";
 import iconUsuario from "../../assets/usuario.svg";
+export const Header = styled.header`
+  box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+  position: sticky;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+  top: 0;
+`;
 export const NavFlex = styled.div`
   display: flex;
-  justify-content: space-around;
-  background-color: ${themes.background};
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 1px 1px white;
-  padding: 0 15rem 0 15rem;
-  color: white;
-  padding: 1rem 2rem;
+  height: 4rem;
 `;
 export const LinkNav = styled.span`
-  color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  color: black;
 `;
 export const Navh4 = styled.h4`
   display: flex;
