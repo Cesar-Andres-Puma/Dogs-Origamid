@@ -39,7 +39,15 @@ export const Nav = styled.nav`
     box-shadow: 0 1px 2px rgb(0, 0, 0.2);
     border-radius: 0.2rem;
     transform: translateX(-10px);
+    opacity: 0;
+    pointer-events: none;
+  }
+  &.navMobileActive {
+    transition: 0.3s;
+    transform: initial;
+    pointer-events: initial;
     opacity: 1;
+    z-index: 100;
   }
   &.activeNavMobile > a,
   &.activeNavMobile > button {
@@ -52,6 +60,25 @@ export const Nav = styled.nav`
     padding: 0.5rem 0;
     cursor: pointer;
   }
+  &.activeNavMobile > a:hover,
+  &.activeNavMobile > a:focus {
+    background: #fff;
+    box-shadow: none;
+    outline: none;
+  }
+  &.activeNavMobile > .active {
+    background: #fff;
+    box-shadow: 0 0 0 3px transparent;
+  }
+  &.activeNavMobile > a:hover svg * {
+    fill: #fb1;
+  }
+  @media (max-width: 40rem) {
+    &.activeNavMobile,
+    a > svg {
+      margin-right: 0.5rem;
+    }
+  }
 `;
 
 export const Link = styled(NavLink)`
@@ -61,17 +88,19 @@ export const Link = styled(NavLink)`
   width: 40px;
   display: flex;
   align-items: center;
-  justify-content: center;
   border: 1px solid transparent;
   transition: 0.1s;
   display: flex;
   align-items: center;
   color: black;
   cursor: pointer;
+  @media (min-width: 640px) {
+    justify-content: center;
+  }
   &:hover,
   &:focus {
     background: #fff;
-    box-shadow: 0 0 0 3px #333;
+    box-shadow: 0 0 0 1px #333;
     border-color: #333;
     outline: none;
   }

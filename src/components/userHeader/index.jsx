@@ -16,10 +16,12 @@ import { useMedia } from "../../hooks/useMedia";
 export const UserHeader = () => {
   const { UserLogout } = useContext(UserContext);
   const [title, setTitle] = useState("");
-  const mobile = useMedia("(max-width:390px)");
+  const mobile = useMedia("(max-width:40rem)");
   const [activeMobile, setActiveMobile] = useState(false);
-  console.log(activeMobile);
-  console.log(mobile);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    setActiveMobile(false);
+  }, [pathname]);
   const location = useLocation();
   useEffect(() => {
     const { pathname } = location;
