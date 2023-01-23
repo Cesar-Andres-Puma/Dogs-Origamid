@@ -48,3 +48,15 @@ export const User_POST = (body) => {
     },
   };
 };
+export const PHOTO_POST = (FormData, token) => {
+  return {
+    url: URLDois + "/api/photo",
+    options: {
+      method: "POST",
+      headers: {
+        authorization: "Bearer" + token,
+      },
+      body: FormData,
+    },
+  };
+};
