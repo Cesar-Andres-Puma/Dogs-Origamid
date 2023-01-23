@@ -5,12 +5,20 @@ import { useState } from "react";
 import { userForm } from "../../hooks";
 import { useFetch } from "../../hooks/useFetch";
 import { PHOTO_POST } from "../../services/api";
+import { Error } from "../../components/input/style";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 export const UserPhotoPost = () => {
   const nome = userForm();
   const peso = userForm("number");
   const idade = userForm("number");
   const [img, setImg] = useState({});
   const { data, error, loading, request } = useFetch();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (data) navigate("/conta");
+  }, [data, navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -43,7 +51,12 @@ export const UserPhotoPost = () => {
           id="img"
           onChange={handleImgChange}
         />
-        <Button>Enviar</Button>
+        {loading ? (
+          <Button disabled>Carregando</Button>
+        ) : (
+          <Button>Enviar</Button>
+        )}
+        <Error error={error} />
       </S.Form>
       <S.ContainerImg>
         {img.preview && <S.Img src={img.preview} />}
