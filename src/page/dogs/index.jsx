@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { Feed } from "../../components/feed";
 import { Footer } from "../../components/footer";
 import * as S from "./style";
 export const Dogs = () => {
@@ -9,6 +10,7 @@ export const Dogs = () => {
         content="Dogs - Rede social para cachorros."
         name="description"
       />
+      <Feed />
     </>
   );
 };

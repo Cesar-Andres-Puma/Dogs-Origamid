@@ -23,6 +23,7 @@ body{
     padding: 0 1rem;
     margin: 0 auto;
 }
+.Container
 .LinkPassword{
   margin: 2.5rem 0;
   display: inline-block;
