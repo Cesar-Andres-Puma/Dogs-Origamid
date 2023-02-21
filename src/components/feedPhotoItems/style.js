@@ -7,7 +7,7 @@ export const Li = styled.li`
   cursor: pointer;
   border-radius: 0.2rem;
 `;
-export const Img = styled.img`
+export const ImageSkeleton = styled.img`
   width: 100%;
   grid-area: 1/1;
 `;
