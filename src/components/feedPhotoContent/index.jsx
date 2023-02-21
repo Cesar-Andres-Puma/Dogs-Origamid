@@ -24,8 +24,8 @@ export const PhotoContent = ({ data }) => {
             <li>{photo.idade} anos</li>
           </ul>
         </div>
+        <PhotoComments className={comments} id={photo} comments={comments} />
       </div>
-      <PhotoComments className={comments} id={photo} comments={comments} />
     </S.Container>
   );
 };

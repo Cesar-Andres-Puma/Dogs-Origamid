@@ -3,7 +3,7 @@ import iconViewBlack from "../../assets/visualizacao-black.svg";
 import styled from "styled-components";
 export const Container = styled.div`
   margin: auto;
-  height: 36rem;
+  max-height: 36rem;
   border-radius: 0.2rem;
   background-color: white;
   display: grid;
@@ -68,6 +68,26 @@ export const Container = styled.div`
   }
   .comments {
     padding: 0 2rem;
+  }
+  .title > a {
+    line-height: 1;
+    font-size: 3rem;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    color: #333;
+  }
+  .title > a::before {
+    content: "";
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #fb1;
+    position: absolute;
+    bottom: 15px;
+    left: -5px;
+    border-radius: 0.2rem;
+    z-index: -1;
   }
   @media (max-width: 64rem) {
     height: auto;

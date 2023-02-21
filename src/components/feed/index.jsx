@@ -6,7 +6,7 @@ import * as S from "./style";
 export const Feed = () => {
   const [modalPhoto, setModalPhoto] = useState(null);
   return (
-    <S.Section className="ContainerHero">
+    <S.Section className="ContainerHero" style={{ marginTop: "2rem" }}>
       {modalPhoto && (
         <FeedModal photo={modalPhoto} setModalPhoto={setModalPhoto} />
       )}
