@@ -92,3 +92,15 @@ export const COMMENTS_POST = (id, body, token) => {
     },
   };
 };
+
+export const PHOTO_DELETE = (id, token) => {
+  return {
+    url: `${URLDois}/api/photo/${id}`,
+    options: {
+      method: "DELETE",
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    },
+  };
+};
