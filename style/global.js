@@ -14,10 +14,7 @@ a{
 li{
     list-style: none;
 }
-body{
-  color: white;
-  background-color: black;
-}
+
 .ContainerHero{
   max-width: 50rem;
     padding: 0 1rem;
