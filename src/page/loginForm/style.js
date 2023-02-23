@@ -10,6 +10,21 @@ export const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   margin-top: 20vh;
+  .LinkPassword {
+    width: max-content;
+    display: inline-block;
+    color: #666;
+    padding: 0.5rem 0;
+    line-height: 1;
+    margin: 1.5rem 0;
+  }
+  .LinkPassword:after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: currentColor;
+    display: block;
+  }
 `;
 export const Title = styled.h1`
   line-height: 1;
