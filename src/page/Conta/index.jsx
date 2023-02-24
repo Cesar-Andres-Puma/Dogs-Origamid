@@ -1,7 +1,9 @@
+import { FeedPhoto } from "../../components/feedPhoto";
+
 export const Conta = () => {
   return (
     <>
-      <p>conta</p>
+      <FeedPhoto user={user} />
     </>
   );
 };

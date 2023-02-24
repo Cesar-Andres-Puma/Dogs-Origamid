@@ -6,6 +6,7 @@ export const Li = styled.li`
   overflow: hidden;
   cursor: pointer;
   border-radius: 0.2rem;
+  box-shadow: 1px 1px solid;
 `;
 export const ImageSkeleton = styled.img`
   width: 100%;

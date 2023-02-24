@@ -5,15 +5,15 @@ import { useFetch } from "../../hooks/useFetch";
 import { PHOTOS_GETS } from "../../services/api";
 import { FeedPhotoItems } from "../feedPhotoItems";
 import * as S from "./style";
-export const FeedPhoto = ({ setModalPhoto }) => {
+export const FeedPhoto = ({ setModalPhoto, user }) => {
   const { data, error, request, loading } = useFetch();
   useEffect(() => {
     async function fetchPhoto() {
-      const { url, options } = PHOTOS_GETS({ page: 1, total: 6, user: 0 });
+      const { url, options } = PHOTOS_GETS({ page: 1, total: 6, user });
       const { response, json } = await request(url, options);
     }
     fetchPhoto();
-  }, []);
+  }, [user]);
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
   if (data)

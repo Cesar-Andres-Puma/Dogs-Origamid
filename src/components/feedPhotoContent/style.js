@@ -14,6 +14,7 @@ export const Container = styled.div`
   opacity: 0;
   transform: scale(0.8);
   animation: scaleUp 0.3s forwards;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   @keyframes scaleUp {
     to {
       opacity: initial;
