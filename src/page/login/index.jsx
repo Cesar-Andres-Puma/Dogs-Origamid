@@ -4,6 +4,7 @@ import { Password } from "../Password";
 import { Registration } from "../registration";
 import { UserContext } from "../../context";
 import { useContext } from "react";
+import { Error } from "../error";
 export const Login = () => {
   const { login } = useContext(UserContext);
   if (login === true) return <Navigate to="/conta" />;
@@ -13,6 +14,7 @@ export const Login = () => {
         <Route path="/" element={<LoginForm />} />
         <Route path="senha" element={<Password />} />
         <Route path="registro" element={<Registration />} />
+        <Route path="*" element={<Error />} />
       </Routes>
     </>
   );

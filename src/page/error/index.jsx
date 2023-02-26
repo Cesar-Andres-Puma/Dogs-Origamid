@@ -1,7 +1,8 @@
+import * as S from "./style";
 export const Error = () => {
   return (
-    <>
-      <h1>Algo deu errado com a rota</h1>
-    </>
+    <section className="ContainerHero">
+      <S.title>Error: 404</S.title>
+    </section>
   );
 };
