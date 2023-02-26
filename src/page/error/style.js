@@ -7,7 +7,7 @@ export const title = styled.h1`
   z-index: 1;
   text-decoration: none;
   color: #333;
-  margin-top: 2rem;
+  margin: 2rem 0 1rem 0;
   &:before {
     content: "";
     display: block;
