@@ -90,4 +90,13 @@ li{
   
   
 }
+.styleSingle{
+grid-template-columns: 1fr;
+max-height: max-content;
+box-shadow: none;
+margin-top: 2rem;
+}
+.styleSingle > .details{
+  padding: 1rem 0;
+}
 `;

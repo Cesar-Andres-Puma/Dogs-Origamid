@@ -79,9 +79,18 @@ export const PHOTO_GET = (id) => {
   };
 };
 
+export const PHOTO_GETTE = (id) => {
+  return {
+    url: URLDois + `/api/photo/${id}`,
+    options: {
+      method: "GET",
+      cache: "no-store",
+    },
+  };
+};
 export const COMMENTS_POST = (id, body, token) => {
   return {
-    url: `${URLDois}/api/comment/${id}`,
+    url: `${URLDois}/api/comment/${id}/`,
     options: {
       method: "POST",
       headers: {

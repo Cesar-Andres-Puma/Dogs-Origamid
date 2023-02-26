@@ -6,11 +6,11 @@ import { PhotoComments } from "../PhotoComments";
 import { PhotoDelete } from "../photoDelete";
 import * as S from "./style";
 
-export const PhotoContent = ({ data }) => {
+export const PhotoContent = ({ data, single }) => {
   const user = useContext(UserContext);
   const { photo, comments } = data;
   return (
-    <S.Container>
+    <S.Container className={single ? "styleSingle" : ""}>
       <S.StyleImg>
         <ImageSkeleton src={photo.src} alt={photo.title} />
       </S.StyleImg>

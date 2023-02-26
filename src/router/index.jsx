@@ -7,6 +7,7 @@ import { Api } from "../page/apitest/Api";
 import { Dogs } from "../page/dogs";
 import { Error } from "../page/error";
 import { Login } from "../page/login";
+import { Photo } from "../page/photo";
 import { User } from "../page/user";
 
 export const RouterApp = () => {
@@ -25,6 +26,7 @@ export const RouterApp = () => {
               </ProtectedRoute>
             }
           />
+          <Route path="foto:id" element={<Photo />} />
           <Route path="/teste" element={<Api />} />
           <Route path="*" element={<Error />} />
         </Routes>
