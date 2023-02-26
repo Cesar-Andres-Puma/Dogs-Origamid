@@ -7,6 +7,9 @@ export const Section = styled.section`
   margin-top: 1rem;
   margin-bottom: 2rem;
   align-items: center;
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+  }
 `;
 export const Form = styled.form`
   display: flex;
