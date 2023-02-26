@@ -9,6 +9,7 @@ import { Error } from "../page/error";
 import { Login } from "../page/login";
 import { Photo } from "../page/photo";
 import { User } from "../page/user";
+import { UserProfile } from "../page/userProfile";
 
 export const RouterApp = () => {
   return (
@@ -27,6 +28,7 @@ export const RouterApp = () => {
             }
           />
           <Route path="foto:id" element={<Photo />} />
+          <Route path="perfil/:user" element={<UserProfile />} />
           <Route path="/teste" element={<Api />} />
           <Route path="*" element={<Error />} />
         </Routes>
