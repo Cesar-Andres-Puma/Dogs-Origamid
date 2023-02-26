@@ -5,7 +5,6 @@ export const ImageSkeleton = ({ alt, ...props }) => {
   const handleLoad = ({ target }) => {
     setSkeleton(false);
     target.style.opacity = 1;
-    console.log("Teste");
   };
   return (
     <S.Wrapper>

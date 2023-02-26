@@ -54,7 +54,6 @@ export const UserStorage = ({ children }) => {
       const tokenRes = await fetch(url, options);
       if (!tokenRes.ok) throw new Error(`Error: Usuario invalido`);
       const { token } = await tokenRes.json();
-      console.log(token);
       window.localStorage.setItem("token", token);
       await GetUser(token);
       navigate("/conta");

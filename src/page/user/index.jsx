@@ -11,7 +11,6 @@ import { UserStatic } from "../userStats";
 import * as S from "./style";
 export const User = () => {
   const { data } = useContext(UserContext);
-  console.log(`aqui e a rota ${data.id}`);
   return (
     <S.Section className="ContainerHero">
       <UserHeader />

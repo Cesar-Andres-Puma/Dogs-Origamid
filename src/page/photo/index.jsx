@@ -8,7 +8,6 @@ import { PHOTO_GETTE } from "../../services/api";
 
 export const Photo = () => {
   const { id } = useParams();
-  console.log(id);
   const { error, request, loading, data } = useFetch();
   useEffect(() => {
     const { url, options } = PHOTO_GETTE(id);
