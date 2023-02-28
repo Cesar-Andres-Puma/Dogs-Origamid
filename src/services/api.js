@@ -138,3 +138,12 @@ export const PASSWORD_RESET = (body) => {
     },
   };
 };
+export const STATS_GET = (token) => {
+  return {
+    url: URLDois + `/api/stats`,
+    options: {
+      method: "GET",
+      headers: { authorization: "Bearer" + token },
+    },
+  };
+};
