@@ -6,7 +6,7 @@ export const FeedPhotoItems = ({ photo, setModalPhoto }) => {
   };
   return (
     <S.Li onClick={handleClick}>
-      <S.ImageSkeleton src={photo.src} alt={photo.title} />
+      <ImageSkeleton src={photo.src} alt={photo.title} />
       <S.Span>{photo.acessos}</S.Span>
     </S.Li>
   );

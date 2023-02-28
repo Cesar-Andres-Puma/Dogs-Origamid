@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Skeleton = styled.div`
+  width: 100%;
   grid-area: 1/1;
   height: 100%;
   background-image: linear-gradient(90deg, #eee 0px, #fff 50%, #eee 100%);

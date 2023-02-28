@@ -7,10 +7,10 @@ export const Li = styled.li`
   cursor: pointer;
   border-radius: 0.2rem;
   box-shadow: 1px 1px solid;
-`;
-export const ImageSkeleton = styled.img`
-  width: 100%;
-  grid-area: 1/1;
+  .skeletonActive {
+    width: 100%;
+    grid-area: 1/1;
+  }
 `;
 export const Span = styled.span`
   grid-area: 1/1;
