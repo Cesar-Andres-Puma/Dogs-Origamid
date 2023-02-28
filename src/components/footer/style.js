@@ -5,7 +5,8 @@ export const Footer = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: ${themes.background};
-  padding: 2rem 0;
+  padding: 3rem 1rem 0 1rem;
+  height: 10rem;
 `;
 export const IconFooter = styled.img`
   width: 25px;

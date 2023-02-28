@@ -12,30 +12,35 @@ import { Photo } from "../page/photo";
 import { User } from "../page/user";
 import { UserProfile } from "../page/userProfile";
 
+import * as S from "./style";
 export const RouterApp = () => {
   return (
-    <BrowserRouter>
-      <UserStorage>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Dogs />} />
-          <Route path="Login/*" element={<Login />} />
-          <Route
-            path="conta/*"
-            element={
-              <ProtectedRoute>
-                <User />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="foto:id" element={<Photo />} />
-          <Route path="perfil/:user" element={<UserProfile />} />
-          <Route path="reset/" element={<PasswordReset />} />
-          <Route path="/teste" element={<Api />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-        {/* <Footer /> */}
-      </UserStorage>
-    </BrowserRouter>
+    <S.Container>
+      <BrowserRouter>
+        <UserStorage>
+          <Header />
+          <S.ContainerMain>
+            <Routes>
+              <Route path="/" element={<Dogs />} />
+              <Route path="Login/*" element={<Login />} />
+              <Route
+                path="conta/*"
+                element={
+                  <ProtectedRoute>
+                    <User />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="foto:id" element={<Photo />} />
+              <Route path="perfil/:user" element={<UserProfile />} />
+              <Route path="reset/" element={<PasswordReset />} />
+              <Route path="/teste" element={<Api />} />
+              <Route path="*" element={<Error />} />
+            </Routes>
+          </S.ContainerMain>
+          <Footer />
+        </UserStorage>
+      </BrowserRouter>
+    </S.Container>
   );
 };
